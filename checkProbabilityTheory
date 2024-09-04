@@ -1,1 +1,25 @@
+function checkProbabilityTheory(count) {
+    let evenCount = 0; // рядок оголошує змінну, яка буде використовуватись для підрахунку парних чисел
+    let oddCount = 0; // рядок оголошує змінну, яка буде використовуватись для підрахунку непарних чисел
 
+for (let i = 0; i < count; i++) {
+ for (let i = 0; i < count; i++) {
+
+        const randomNumber = Math.floor(Math.random() * 901) + 100; //Генерація випадкового числа від 100 до 1000
+        if (Number.isInteger(randomNumber)) {
+            const lastDigit = parseInt(randomNumber.toString().slice(-1), 10); // Отримання останньої цифри числа
+            if (lastDigit % 2 === 0) {
+                evenCount++; // Підрахунок парних чисел
+            } else {
+                oddCount++; // Підрахунок непарних чисел
+            }
+        }
+    }
+    const evenPercentage = (evenCount / count * 100).toFixed(2);
+    const oddPercentage = (oddCount / count * 100).toFixed(2);
+
+    console.log(`Кількість згенерованих чисел: ${count}`);
+    console.log(`Парних чисел: ${evenCount}`);
+    console.log(`Непарних чисел: ${oddCount}`);
+    console.log(`Відсоток парних до непарних: ${evenPercentage}% до ${oddPercentage}%`);
+}
