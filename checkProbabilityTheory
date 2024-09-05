@@ -3,7 +3,7 @@ function checkProbabilityTheory(count) {
     let oddCount = 0; // Оголошення змінної для підрахунку непарних чисел
 
     for (let i = 0; i < count; i++) {  // Генерація випадкового числа від 100 до 1000 включно
-        let randomNumber = Math.floor(Math.random() * (1000 - 100 + 1)) + 100; // Перевірка, чи є число парним
+        let randomNumber = Math.floor(Math.random() * (1000 - 100 + 1)) + 100;
         if (randomNumber % 2 === 0) {
             evenCount++; // Підрахунок парних чисел
         } else {
