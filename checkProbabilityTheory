@@ -10,17 +10,10 @@ function checkProbabilityTheory(count) {
             oddCount++; // Підрахунок непарних чисел
         }
     }
-
     const evenPercentage = (evenCount / count * 100).toFixed(2); // Відсоток парних чисел
     const oddPercentage = (oddCount / count * 100).toFixed(2); // Відсоток непарних чисел
 
-    console.log(`Кількість згенерованих чисел: ${count}`);
-    console.log(`Парних чисел: ${evenCount}`);
-    console.log(`Непарних чисел: ${oddCount}`);
-    console.log(`Відсоток парних до непарних: ${evenPercentage}% до ${oddPercentage}%`);
-}
-
-// count = 100
+  // count = 100
 checkProbabilityTheory(100);
 
     console.log(`Кількість згенерованих чисел: ${count}`); // 100 знегерованих чисел
